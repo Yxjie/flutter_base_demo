@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_base_demo/gesture_page.dart';
+import 'package:flutter_base_demo/shared_prefrences_use.dart';
 import 'plugin_use.dart';
 import 'package:flutter_base_demo/less_group_page.dart';
 import 'package:flutter_base_demo/statefull_group_page.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         "res": (BuildContext context) => ResUsePage(),
         "launch": (BuildContext context) => LaunchPage(),
         "photo": (BuildContext context) => PhotoPage(),
+        "shared_preferences":(context)=>SharedPreferencesUse(),
       },
       home: RouterPage(title: 'Flutter Demo'),
     );
@@ -72,6 +74,8 @@ class _RouterPageState extends State<RouterPage> {
               _item("如何导入和引用资源", ResUsePage(), "res"),
               _item("打开第三方应用", LaunchPage(), "launch"),
               _item("拍照App", PhotoPage(), "photo"),
+              _item("shared_preferences 插件使用", SharedPreferencesUse(), "shared_preferences"),
+
             ],
           ),
         ));
